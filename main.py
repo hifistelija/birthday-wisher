@@ -10,7 +10,7 @@ today_tuple = (today_month, today_day)
 
 data = pd.read_csv("birthdays.csv")
 birthday_dict = {
-    (data_row.month, data_row.day): data_row for (index, data_row) in data.iterrows()
+    (data_row["month"], data_row["day"]): data_row for (index, data_row) in data.iterrows()
 }
 
 if today_tuple in birthday_dict:
